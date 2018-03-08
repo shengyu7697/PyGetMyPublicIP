@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 import os
 
 def getMyPublicIP1():
-	r = requests.get('https://myip.com.tw/')
+	r = requests.get('https://myip.com.tw')
 	soup = BeautifulSoup(r.content, 'lxml')
 	tag = soup.find('font').getText()
 	return tag
@@ -21,8 +21,21 @@ def getMyPublicIP2():
 def getMyPublicIP3():
 	return requests.get('https://api.ipify.org').text
 
+def getMyPublicIP4():
+	headers = {
+	'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+	}
+	rs = requests.session()
+	r = rs.get('https://whatismyipaddress.com', headers=headers)
+	soup = BeautifulSoup(r.content, 'lxml')	
+	return soup.find('div', style='text-align:center;padding-top:4px;').find('a').text
+	#<div style="text-align:center;padding-top:4px;">
+	#<a href="//whatismyipaddress.com/ip/xx.xx.xx.xx" style="font-weight:bold;color:#007cc3;font-size:26px;text-decoration:none;">xx.xx.xx.xx</a>
+	#</div>
+
 if __name__ == '__main__':
 	print 'My Public IP address is:'
-	print '%s (https://myip.com.tw/)' % getMyPublicIP1()
+	print '%s (https://myip.com.tw)' % getMyPublicIP1()
 	print '%s (https://www.rus.net.tw/myip.php)' % getMyPublicIP2()
 	print '%s (https://api.ipify.org)' % getMyPublicIP3()
+	print '%s (https://whatismyipaddress.com)' % getMyPublicIP4()
