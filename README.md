@@ -5,7 +5,7 @@ This is a program that get and show your public IP addresses.
 ## How to Use
 
 ```
-getMyPublicIP.py
+get-publicip.py
 ```
 
 ## System Requirement
