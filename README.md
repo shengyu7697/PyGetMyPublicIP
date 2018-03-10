@@ -12,7 +12,7 @@ This is a program that get and show your public IP addresses.
 ## How to Use
 
 ```
-get-publicip.py
+getpublicip.py
 ```
 
 ## System Requirement
