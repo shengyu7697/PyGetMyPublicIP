@@ -12,9 +12,14 @@ This is a program that get and show your public IP addresses.
     + https://whatismyipaddress.com
 
 ## How to Use
-
+command line  
 ```
-getpublicip.py
+$ ./getpublicip.py
+```
+
+gui  
+```
+$ ./getpublicip-gui.py
 ```
 
 ## System Requirement
