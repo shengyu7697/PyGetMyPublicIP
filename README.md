@@ -2,6 +2,8 @@ PyGetMyPublicIP
 ============
 This is a program that get and show your public IP addresses.  
 
+![screenshot](https://raw.github.com/shengyu7697/PyGetMyPublicIP/master/screenshot/screenshot.png)
+
 ## Features
 * Support many websites:
     + https://myip.com.tw
