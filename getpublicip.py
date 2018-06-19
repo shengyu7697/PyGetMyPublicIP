@@ -27,15 +27,15 @@ def getMyPublicIP4():
 	}
 	rs = requests.session()
 	r = rs.get('https://whatismyipaddress.com', headers=headers)
-	soup = BeautifulSoup(r.content, 'lxml')	
+	soup = BeautifulSoup(r.content, 'lxml')
 	return soup.find('div', style='text-align:center;padding-top:4px;').find('a').text
 	#<div style="text-align:center;padding-top:4px;">
 	#<a href="//whatismyipaddress.com/ip/xx.xx.xx.xx" style="font-weight:bold;color:#007cc3;font-size:26px;text-decoration:none;">xx.xx.xx.xx</a>
 	#</div>
 
 if __name__ == '__main__':
-	print 'My Public IP address is:'
-	print '%s (https://myip.com.tw)' % getMyPublicIP1()
-	print '%s (https://www.rus.net.tw/myip.php)' % getMyPublicIP2()
-	print '%s (https://api.ipify.org)' % getMyPublicIP3()
-	print '%s (https://whatismyipaddress.com)' % getMyPublicIP4()
+	print('My Public IP address is:')
+	print('%s (https://myip.com.tw)' % getMyPublicIP1())
+	print('%s (https://www.rus.net.tw/myip.php)' % getMyPublicIP2())
+	print('%s (https://api.ipify.org)' % getMyPublicIP3())
+	print('%s (https://whatismyipaddress.com)' % getMyPublicIP4())
