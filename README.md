@@ -12,6 +12,12 @@ Demo on ubuntu.
     + https://api.ipify.org
     + https://whatismyipaddress.com
 
+## Dependencies
+```
+$ sudo apt-get install python-qt4 # for gui
+$ pip install requests
+```
+
 ## How to Use
 command line  
 ```
@@ -24,7 +30,7 @@ $ ./getpublicip-gui.py
 ```
 
 ## System Requirement
-Python  
+Python 2.7
 
 ## License
 PyGetMyPublicIP is published under the MIT license.  
